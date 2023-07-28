@@ -19,4 +19,18 @@
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>
     </persistence-unit>
+    <persistence-unit name="saeb" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
+        <class>saeb.entity.Projetos</class>
+        <class>saeb.entity.Recursos</class>
+        <class>saeb.entity.Atividades</class>
+        <class>saeb.entity.Papeis</class>
+        <class>saeb.entity.Equipes</class>
+        <class>saeb.entity.Cargos</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="cronapp.diagram.namespace" value="saeb"/>
+        </properties>
+    </persistence-unit>
 </persistence>
